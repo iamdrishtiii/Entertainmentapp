@@ -10,9 +10,9 @@ import Auth from './pages/Auth'
 
 const App = () => {
   return (
-    <div className='bg-black text-white min-h-[100vh] max-w-[screen] p-4 ' >
+    <div className='bg-black text-white min-h-[100vh] max-w-[screen] p-4 sm:py-4 sm:px-8 ' >
       <BrowserRouter>
-      <Routes className="sm:w-10/12">
+      <Routes>
         <Route path='' element={<Home/>}/>
         <Route path='/movies' element={<Movies/>}/>
         <Route path='/tvseries' element={<TvSeries/>}/>

@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar'
 const TvSeries = () => {
   return (
     <div className=' sm:flex sm:flex-row'>
-      <div><Navbar className="sm:h-[screen] sm:w-1/12"/></div>
-      <div>Tvseries</div>
+      <div><Navbar/></div>
+      <div className="mx-4 my-4 sm:mx-8">Tvseries</div>
       </div>
   )
 }

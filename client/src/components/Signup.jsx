@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { MdMovie } from 'react-icons/md';
 import toast, { Toaster } from "react-hot-toast";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaRegEyeSlash } from "react-icons/fa";
@@ -44,6 +45,7 @@ const Signup = ({ setActive }) => {
     <div className="flex flex-col min-h-screen">
       <Toaster />
       <div className="flex flex-col items-center justify-center h-full bg-black">
+        <MdMovie color='red' className='size-8 sm:size-12' />
         <div className="bg-slate-900 rounded-2xl flex flex-col gap-3 shadow-lg m-3 sm:m-6 p-4 sm:p-8 ">
           <h2 className="text-[42px] text-white mb-4">Sign Up</h2>
           <div className="mb-4">

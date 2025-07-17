@@ -1,1 +1,1 @@
-export const Authurl="http://localhost:4000"
+export const Authurl="https://entertainmentappserver.onrender.com"

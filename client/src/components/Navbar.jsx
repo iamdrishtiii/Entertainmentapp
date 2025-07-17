@@ -47,18 +47,18 @@ const Navbar = () => {
   };
 
   return (
-    <div className='bg-slate-900 px-3 sm:px-6 py-2 sm:py-6 rounded-full mx-1 sm:mx-2 my-2 flex flex-row sm:flex sm:flex-col space-x-8 sm:space-x-0 sm:space-y-36 xl:space-y-40 sm:w-28 '>
-      <div className='sm:w-1/2 flex flex-row sm:flex sm:flex-col space-x-6 sm:space-x-0 sm:space-y-12'>
+    <div className='bg-slate-900 rounded-full flex flex-row sm:flex sm:flex-col items-center justify-between w-full px-2 sm:px-0 py-2 sm:w-20 sm:h-screen sm:py-4'>
+      <div className='flex flex-row sm:flex sm:flex-col space-x-6 sm:space-x-0 sm:space-y-12 ml-4 sm:ml-0 sm:mt-4'>
         <div><MdMovie color='red' className='size-8 sm:size-12' /></div>
-        <div className='flex flex-row sm:flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-6'>
+        <div className='flex flex-row sm:flex sm:flex-col space-x-3 sm:space-x-0 sm:space-y-6'>
           <FaHome className='size-6 sm:size-8' onClick={handleHome} color={active === 1 ? "red" : "white"}/>
           <MdLocalMovies className='size-6 sm:size-8' onClick={handleMovie} color={active === 2 ? "red" : "white"} />
           < GiTv className='size-6 sm:size-8' onClick={handleSeries} color={active === 3 ? "red" : "white"} />
           <FaBookmark className='size-6 sm:size-8' onClick={handleBookmark} color={active === 4 ? "red" : "white"}/>
         </div>
       </div>
-      <div className='sm:w-1/2 flex flex-end pb-12 ' onClick={handleProfileClick} >
-        <CgProfile className='size-8 sm:size-16' />
+      <div className='flex sm:flex-end sm:mb-28 ' onClick={handleProfileClick} >
+        <CgProfile className='size-8 sm:size-12 ' />
       </div>
       {blockVisible && (
       
