@@ -47,7 +47,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='bg-slate-900 rounded-full flex flex-row sm:flex sm:flex-col items-center justify-between w-full px-2 sm:px-0 py-2 sm:w-20 sm:h-screen sm:py-4'>
+    <div className='bg-slate-900 rounded-full flex flex-row sm:flex sm:flex-col items-center justify-between w-full px-2 sm:px-0 py-2 sm:w-20 sm:min-h-[150vh] sm:h-screen sm:py-4'>
       <div className='flex flex-row sm:flex sm:flex-col space-x-6 sm:space-x-0 sm:space-y-12 ml-4 sm:ml-0 sm:mt-4'>
         <div><MdMovie color='red' className='size-8 sm:size-12' /></div>
         <div className='flex flex-row sm:flex sm:flex-col space-x-3 sm:space-x-0 sm:space-y-6'>

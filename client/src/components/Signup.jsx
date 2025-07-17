@@ -46,7 +46,7 @@ const Signup = ({ setActive }) => {
       <Toaster />
       <div className="flex flex-col items-center justify-center h-full bg-black">
         <MdMovie color='red' className='size-8 sm:size-12' />
-        <div className="bg-slate-900 rounded-2xl flex flex-col gap-3 shadow-lg m-3 sm:m-6 p-4 sm:p-8 ">
+        <div className="bg-slate-900 rounded-2xl flex flex-col gap-3 shadow-lg m-3 sm:m-6 p-4 sm:p-8 sm:px-16">
           <h2 className="text-[42px] text-white mb-4">Sign Up</h2>
           <div className="mb-4">
             <input
@@ -54,7 +54,7 @@ const Signup = ({ setActive }) => {
               id="email"
               className="mt-1 py-2 px-4 text-white outline-none bg-[#161D2F] text-[20px] block w-full rounded-md shadow-sm focus:ring-opacity-50"
               value={email}
-              placeholder="Email Address"
+              placeholder="Enter Email"
               onChange={(e) => setEmail(e.target.value)}
             />
             <div className="h-[1.3px] mt-3 w-full bg-[#5A698F]"></div>
