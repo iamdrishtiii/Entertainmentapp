@@ -1,0 +1,1 @@
+export const Authurl="http://localhost:4000"
