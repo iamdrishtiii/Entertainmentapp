@@ -31,7 +31,7 @@ const Movies = () => {
       <div className=' sm:flex sm:flex-row'>
         <div><Navbar /></div>
 
-        <div>
+        <div className="px-4 py-4 sm:px-8 ">
           <div className='py-4 sm:py-12 sm:px-16 text-lg sm:text-3xl flex flex-row gap-6 '>
               <label htmlFor=""><FaSearch /> </label>
             <input placeholder='Search for movies' className='bg-black' value={searchMovie} onChange={(e) => setSearchMovie(e.target.value)} />
