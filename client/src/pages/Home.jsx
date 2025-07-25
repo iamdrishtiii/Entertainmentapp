@@ -44,7 +44,7 @@ const nextslide = () => {
 
 
   return (
-    <div className=' sm:flex sm:flex-row '>
+    <div className=' sm:flex sm:flex-row  min-h-screen max-h-auto '>
       <div><Navbar /></div>
       <div className="px-4 py-4 sm:px-8 ">
         <div className='py-4 sm:py-12 sm:px-16 text-lg sm:text-3xl flex flex-row gap-6 '>
@@ -119,7 +119,7 @@ const nextslide = () => {
 
          {/* Recommended tvshows carousel */}
 
-        <div className='h-screen'>
+        <div>
           <h1 className=' sm:px-20 text-4xl'>Recommended TvShows</h1>
           <div>
             {/* Carousel */}
