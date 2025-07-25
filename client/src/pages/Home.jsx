@@ -38,7 +38,7 @@ const nextslide = () => {
     setcurrentslide((prev) => (prev + 1) % tvseries.length);
   };
   const prevslide = () => {
-    if(currentSlide>0){
+    if(currentslide>0){
     setcurrentslide((prev) => (prev - 1 + tvseries.length) % tvseries.length);
   }}
 
