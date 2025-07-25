@@ -21,9 +21,11 @@ const DetailPage = () => {
     <div className=' sm:flex sm:flex-row'>
       <div className="px-4 sm:px-8 h-auto lg:h-screen pb-[450px] 3xl:pb-48 md:pb-64">
 
+        
         {/*Displaying Movie data */}
         {movieData.map((movie) => {
           return <div className='left p-5  text-xl sm:text-2xl lg:flex lg:flex-row'>
+            
             <div className='  font-bold lg:w-5/12 flex flex-col  '>
               <img src={movie.primaryImage} alt="" className='w-10/12 item-center pt-10' /></div> <br />
             <div>
@@ -60,6 +62,7 @@ const DetailPage = () => {
                   </p>
                 </div>
               </div>
+              <br /> 
               <br />
                 <h2 className="text-[22px] max-sm:text-[18px] text-gray-500 font-semibold">Synopsis</h2>
                 {movie.description} <br />  <br />
@@ -80,6 +83,7 @@ const DetailPage = () => {
         {/*Displaying tvserie data */}
         {tvData.map((tvserie) => {
           return <div className='left p-5  text-xl sm:text-2xl lg:flex lg:flex-row'>
+            
             <div className=' font-bold lg:w-5/12 flex flex-col '>
               <img src={tvserie.primaryImage} alt="" className='w-10/12 item-center pt-10' /></div> <br />
             <div>
@@ -109,6 +113,7 @@ const DetailPage = () => {
                   </p>
                 </div>
               </div>
+              <br /><br />
                 <h2 className="text-[22px] max-sm:text-[18px] text-gray-500 font-semibold">Synopsis</h2>
                 {tvserie.description} <br />  <br />
                 <h2 className="text-[22px] max-sm:text-[18px] text-gray-500 font-semibold">Interest</h2>

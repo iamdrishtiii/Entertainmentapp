@@ -5,8 +5,10 @@ import { useDispatch } from 'react-redux'
 import { getMovies } from '../action'
 import { Link } from 'react-router-dom'
 import { MdKeyboardArrowRight } from 'react-icons/md'
+import { FaSearch } from 'react-icons/fa'
 
 const Movies = () => {
+  const [searchMovie, setSearchMovie] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const moviesPerPage = 12
   const movies = useSelector((state) => state.movies) || []
@@ -26,31 +28,39 @@ const Movies = () => {
 
   return (
     <div>
-    <div className=' sm:flex sm:flex-row'>
-      <div><Navbar /></div>
-      <div className=" px-4 py-4 sm:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">
-        {currentMovies.length > 0 ? (
-          currentMovies.map((movie) => (
-            <div key={movie.id} className=" hover:bg-slate-600 px-10 py-4 h-fit flex justify-center text-center">
-              <Link to={`/movies/${movie.id}/${movie.primaryTitle}`}>
-                <img src={movie.primaryImage} alt="" height="300px" width="300px" className="" />
-                <div className='flex flex-row gap-2'>{movie.releaseDate} {movie.contentRating} </div>
-                <p className="text-3xl text-left">
-                  {movie.primaryTitle}
-                </p>
-              </Link>
+      <div className=' sm:flex sm:flex-row'>
+        <div><Navbar /></div>
+
+        <div>
+          <div className='py-12 px-16 text-3xl flex flex-row gap-6 '>
+              <label htmlFor=""><FaSearch /> </label>
+            <input placeholder='Search for movies' className='bg-black' value={searchMovie} onChange={(e) => setSearchMovie(e.target.value)} />
+          </div>
+          <h1 className=' px-20 text-4xl'>Movies page</h1>
+          <div >
+            {currentMovies.length > 0 ? (
+              <div className=" px-4 py-4 sm:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">
+                {currentMovies.filter((movie)=> movie.primaryTitle.toLowerCase().includes(searchMovie.toLowerCase())).map((movie) => (
+                <div key={movie.id} className=" hover:bg-slate-600 px-10 py-4 h-fit flex justify-center text-center">
+                  <Link to={`/movies/${movie.id}/${movie.primaryTitle}`}>
+                    <img src={movie.primaryImage} alt="" height="320px" width="320px"/>
+                    <div className='flex flex-row gap-2'>{movie.releaseDate} {movie.contentRating} {movie.type} </div>
+                    <p className="text-3xl text-left">
+                      {movie.primaryTitle}
+                    </p>
+                  </Link>
+                </div>
+            ))}
             </div>
-
-          ))
-        ) : (
-          <p>NO Movies found</p>
-        )}
-
+            ) : (
+            <p>NO Movies found</p>
+            )}
+          </div>
+        </div>
       </div>
-    </div>
-    {/* Pagination Controls */}
+      {/* Pagination Controls */}
       {totalPages > 1 && (
-        <div className="flex justify-center text-5xl space-x-2 mt-6 pb-12">
+        <div className="flex justify-center text-xl lg:text-3xl space-x-2 mt-6 pb-12">
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
