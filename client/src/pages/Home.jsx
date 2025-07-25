@@ -47,7 +47,7 @@ const nextslide = () => {
     <div className=' sm:flex sm:flex-row '>
       <div><Navbar /></div>
       <div className="px-4 py-4 sm:px-8 ">
-        <div className='py-12 sm:px-16 text-lg sm:text-3xl flex flex-row gap-6 '>
+        <div className='py-4 sm:py-12 sm:px-16 text-lg sm:text-3xl flex flex-row gap-6 '>
           <label htmlFor=""><FaSearch /> </label>
           <input placeholder='Search movies or tvshows' className='bg-black' value={searchterm} onChange={(e) => setSearchterm(e.target.value)} />
         </div>

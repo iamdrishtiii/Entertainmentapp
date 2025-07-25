@@ -30,11 +30,11 @@ const TvSeries = () => {
       <div className=' sm:flex sm:flex-row'>
         <div><Navbar /></div>
         <div>
-          <div className='py-12 px-16 text-3xl flex flex-row gap-6 '>
+          <div className='py-4 sm:py-12 sm:px-16 text-lg sm:text-3xl flex flex-row gap-6 '>
             <label htmlFor=""><FaSearch /> </label>
             <input placeholder='Search for Tvseries' className='bg-black' value={searchTvserie} onChange={(e) => setSearchTvserie(e.target.value)} />
           </div>
-          <h1 className=' px-20 text-4xl'>TVseries page</h1>
+          <h1 className=' sm:px-20 text-4xl'>TVseries page</h1>
           <div>
             {currentTVseries.length > 0 ? (
               <div className=" px-4 py-4 sm:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">
