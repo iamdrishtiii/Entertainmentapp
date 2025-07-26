@@ -85,7 +85,7 @@ const Movies = () => {
                   ))}
               </div>
             ) : (
-              <p>NO Movies found</p>
+              <p className='px-4 py-4 sm:px-20 text-2xl'>No Movies found</p>
             )}
           </div>
         </div>

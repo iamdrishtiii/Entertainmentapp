@@ -93,7 +93,7 @@ const TvSeries = () => {
                   ))}
               </div>
             ) : (
-              <p>NO Tvseries found</p>
+              <p className='px-4 py-4 sm:px-20 text-2xl'>No Tvseries found</p>
             )}
           </div>
         </div>
