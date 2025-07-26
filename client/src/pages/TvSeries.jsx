@@ -39,9 +39,13 @@ const TvSeries = () => {
     dispatch(getTVseries())
   }, [dispatch])
 
+   const filteredTvseries = tvseries.filter((tvserie) =>
+    tvserie.primaryTitle.toLowerCase().includes(searchTvserie.toLowerCase())
+  );
+
   const indexOfLastTVseries = currentPage * tvseriesPerPage
   const indexOfFirstTVseries = indexOfLastTVseries - tvseriesPerPage
-  const currentTVseries = tvseries.slice(indexOfFirstTVseries, indexOfLastTVseries)
+  const currentTVseries = filteredTvseries.slice(indexOfFirstTVseries, indexOfLastTVseries)
 
   const totalPages = Math.ceil(tvseries.length / tvseriesPerPage)
 
@@ -67,9 +71,6 @@ const TvSeries = () => {
             {currentTVseries.length > 0 ? (
               <div className="px-4 py-4 sm:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">
                 {currentTVseries
-                  .filter((tvserie) =>
-                    tvserie.primaryTitle.toLowerCase().includes(searchTvserie.toLowerCase())
-                  )
                   .map((tvserie) => (
                     <div key={tvserie.id} className="relative hover:bg-slate-600 px-10 py-4 h-fit flex justify-center text-center">
 

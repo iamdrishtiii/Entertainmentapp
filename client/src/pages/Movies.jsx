@@ -40,9 +40,13 @@ const Movies = () => {
     dispatch(getMovies())
   }, [dispatch])
 
+  const filteredMovies = movies.filter((movie) =>
+    movie.primaryTitle.toLowerCase().includes(searchMovie.toLowerCase())
+  );
+
   const indexOfLastMovie = currentPage * moviesPerPage;
   const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
-  const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
+  const currentMovies = filteredMovies.slice(indexOfFirstMovie, indexOfLastMovie);
   const totalPages = Math.ceil(movies.length / moviesPerPage);
 
   return (
@@ -60,7 +64,6 @@ const Movies = () => {
             {currentMovies.length > 0 ? (
               <div className="px-4 py-4 sm:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-8">
                 {currentMovies
-                  .filter((movie) => movie.primaryTitle.toLowerCase().includes(searchMovie.toLowerCase()))
                   .map((movie) => (
                     <div key={movie.id} className="relative hover:bg-slate-600 px-10 py-4 h-fit flex justify-center text-center">
 
