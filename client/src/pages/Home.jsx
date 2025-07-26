@@ -90,8 +90,8 @@ const Home = () => {
               {movies.length > 0 && (
                 <div className="relative w-full flex justify-center items-center sm:p-6 mt-4 ">
                   <button onClick={prevSlide} className="absolute left-0 md:left-4 p-4"><TfiArrowCircleLeft /></button>
-                  <Link to={`/movies/${movies[currentSlide].id}/${movies[currentSlide].primaryTitle}`}>
                     <div className=" px-12 flex justify-center items-center flex flex-row gap-4">
+                      <Link to={`/movies/${movies[currentSlide].id}/${movies[currentSlide].primaryTitle}`}>
                       <div><img
                         src={movies[currentSlide].primaryImage}
                         alt={movies[currentSlide].primaryTitle}
@@ -99,6 +99,8 @@ const Home = () => {
                       />
                         <p className="text-lg">{movies[currentSlide].primaryTitle}</p>
                       </div>
+                      </Link>
+                      <Link to={`/movies/${movies[currentSlide+1].id}/${movies[currentSlide+1].primaryTitle}`}>
                       <div className='hidden sm:block'>
                         <img
                           src={movies[currentSlide + 1].primaryImage}
@@ -106,7 +108,8 @@ const Home = () => {
                           className="w-[300px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{movies[currentSlide + 1].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/movies/${movies[currentSlide+2].id}/${movies[currentSlide+2].primaryTitle}`}>
                       <div className='hidden md:block'>
                         <img
                           src={movies[currentSlide + 2].primaryImage}
@@ -114,7 +117,8 @@ const Home = () => {
                           className="w-[300px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{movies[currentSlide + 2].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/movies/${movies[currentSlide+3].id}/${movies[currentSlide+3].primaryTitle}`}>
                       <div className='hidden lg:block'>
                         <img
                           src={movies[currentSlide + 3].primaryImage}
@@ -122,7 +126,8 @@ const Home = () => {
                           className="w-[300px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{movies[currentSlide + 3].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/movies/${movies[currentSlide+4].id}/${movies[currentSlide+4].primaryTitle}`}>
                       <div className='hidden xl:block'>
                         <img
                           src={movies[currentSlide + 4].primaryImage}
@@ -130,7 +135,8 @@ const Home = () => {
                           className="w-[300px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{movies[currentSlide + 4].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/movies/${movies[currentSlide+5].id}/${movies[currentSlide+5].primaryTitle}`}>
                       <div className='hidden 2xl:block'>
                         <img
                           src={movies[currentSlide + 5].primaryImage}
@@ -138,9 +144,9 @@ const Home = () => {
                           className="w-[300px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{movies[currentSlide + 5].primaryTitle}</p>
-                      </div>
+                      </div></Link>
                     </div>
-                  </Link>
+                  
                   <button onClick={nextSlide} className="absolute right-0 md:right-4 p-4"><TfiArrowCircleLeft className="rotate-180" /></button>
                 </div>
               )}
@@ -154,15 +160,16 @@ const Home = () => {
               {tvseries.length > 0 && (
                 <div className="relative w-full flex justify-center items-center sm:p-6 mt-4 ">
                   <button onClick={prevslide} className="absolute left-0 md:left-4 p-4"><TfiArrowCircleLeft /></button>
-                  <Link to={`/tvseries/${tvseries[currentslide].id}/${tvseries[currentslide].primaryTitle}`}>
-                    <div className=" px-12 flex justify-center items-center flex flex-row gap-4">
+                  <div className=" px-12 flex justify-center items-center flex flex-row gap-4">
+                    <Link to={`/tvseries/${tvseries[currentslide].id}/${tvseries[currentslide].primaryTitle}`}>
                       <div><img
                         src={tvseries[currentslide].primaryImage}
                         alt={tvseries[currentslide].primaryTitle}
                         className="w-[200px] h-[200px] rounded-lg"
                       />
                         <p className="text-lg">{tvseries[currentslide].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+1].id}/${tvseries[currentslide+1].primaryTitle}`}>
                       <div>
                         <img
                           src={tvseries[currentslide + 1].primaryImage}
@@ -170,7 +177,8 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 1].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+2].id}/${tvseries[currentslide+2].primaryTitle}`}>
                       <div className='hidden sm:block'>
                         <img
                           src={tvseries[currentslide + 2].primaryImage}
@@ -178,7 +186,8 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 2].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+3].id}/${tvseries[currentslide+3].primaryTitle}`}>
                       <div className='hidden sm:block'>
                         <img
                           src={tvseries[currentslide + 3].primaryImage}
@@ -186,7 +195,8 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 3].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+4].id}/${tvseries[currentslide+4].primaryTitle}`}>
                       <div className='hidden md:block'>
                         <img
                           src={tvseries[currentslide + 4].primaryImage}
@@ -194,7 +204,8 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 4].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+5].id}/${tvseries[currentslide+5].primaryTitle}`}>
                       <div className='hidden lg:block'>
                         <img
                           src={tvseries[currentslide + 5].primaryImage}
@@ -202,7 +213,8 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 5].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+6].id}/${tvseries[currentslide+6].primaryTitle}`}>
                       <div className='hidden xl:block'>
                         <img
                           src={tvseries[currentslide + 6].primaryImage}
@@ -210,7 +222,8 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 6].primaryTitle}</p>
-                      </div>
+                      </div></Link>
+                      <Link to={`/tvseries/${tvseries[currentslide+7].id}/${tvseries[currentslide+7].primaryTitle}`}>
                       <div className='hidden 2xl:block'>
                         <img
                           src={tvseries[currentslide + 7].primaryImage}
@@ -218,9 +231,9 @@ const Home = () => {
                           className="w-[200px] h-[200px] rounded-lg"
                         />
                         <p className="text-lg">{tvseries[currentslide + 7].primaryTitle}</p>
-                      </div>
+                      </div></Link>
                     </div>
-                  </Link>
+                
                   <button onClick={nextslide} className="absolute right-0 md:right-4 p-4"><TfiArrowCircleLeft className="rotate-180" /></button>
                 </div>
               )}
