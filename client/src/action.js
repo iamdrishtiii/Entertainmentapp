@@ -6991,7 +6991,7 @@ export const getMovies = () => {
             //         "metascore": 79
             //     }
             // ]
-            // console.log(result)
+            console.log(result)
             dispatch(
                 ((movie) => {
                     return {
@@ -14006,7 +14006,7 @@ export const getTVseries = () => {
             //         "metascore": null
             //     }
             // ]
-            // console.log(result)
+            console.log(result)
             dispatch(
                 ((tvseries) => {
                     return {
